@@ -4,7 +4,7 @@ import { Button, Form } from "react-bootstrap";
 import FormContainer from "../components/FormContainer";
 import { Link } from "react-router-dom";
 
-const LoginScreen = () => {
+const RegisterScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -13,7 +13,7 @@ const LoginScreen = () => {
   };
   return (
     <FormContainer>
-      <h2>Sign In</h2>
+      <h2>Register</h2>
       <Form className="my-3" onSubmit={submitHandler}>
         <Form.Group>
           <Form.Label>Email</Form.Label>
@@ -31,13 +31,13 @@ const LoginScreen = () => {
             onChange={(e) => setPassword(e.target.value)}
           ></Form.Control>
         </Form.Group>
-        <Button type="submit">Sign In</Button>
+        <Button type="submit">Register</Button>
       </Form>
-      <Link to="/register" style={{ color: "black" }}>
-        Dont' have an account yet?
+      <Link to="/login" style={{ color: "black" }}>
+        Already have an account?
       </Link>
     </FormContainer>
   );
 };
 
-export default LoginScreen;
+export default RegisterScreen;
